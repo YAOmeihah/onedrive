@@ -134,7 +134,7 @@ export async function checkAuthRoute(
     if (
       !compareHashedToken({
         odTokenHeader: odTokenHeader,
-        dotPassword: odProtectedToken.data.toString(),
+        dotPassword: odProtectedToken.data,
       })
     ) {
       return { code: 401, message: 'Password required.' }
